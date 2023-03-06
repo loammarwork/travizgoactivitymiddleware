@@ -1,0 +1,27 @@
+export declare const mapper: {
+    readonly DAY0: "Sunday";
+    readonly DAY1: "Monday";
+    readonly DAY2: "Tuesday";
+    readonly DAY3: "Wednesday";
+    readonly DAY4: "Thursday";
+    readonly DAY5: "Friday";
+    readonly DAY6: "Saturday";
+    readonly how_to_redeem: "How to redeem";
+    readonly description: "Description";
+    readonly highlight: "Highlights";
+    readonly overview: "Overview";
+    readonly aligibility: "Aligibility";
+    readonly usageValidity: "Usage Validity";
+    readonly additionalInfo: "Additional Info";
+    readonly highlights: "Highlights";
+    readonly inclusions: "Includes";
+    readonly howToUse: "How to redeem";
+    readonly questions: "Questions";
+    readonly operatingHours: "Addition Detail";
+    readonly ticketFormat: "Ticket Type";
+    readonly ticketValidity: "Ticket Validity";
+    readonly excluded: "Excludes";
+    readonly included: "Includes";
+    readonly importantInfo: "Important Info";
+};
+export default mapper;
