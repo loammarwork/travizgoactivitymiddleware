@@ -23,5 +23,6 @@ export declare const mapper: {
     readonly excluded: "Excludes";
     readonly included: "Includes";
     readonly importantInfo: "Important Info";
+    readonly advancedTips: "Advanced Tips";
 };
 export default mapper;

@@ -33,6 +33,7 @@ exports.mapper = {
     excluded: "Excludes",
     included: "Includes",
     importantInfo: "Important Info",
+    advancedTips: "Advanced Tips",
     /* HotelBeds */
 };
 exports.default = exports.mapper;
