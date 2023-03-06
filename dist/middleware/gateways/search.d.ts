@@ -1,6 +1,6 @@
 import * as z from "zod";
 import { Response, NextFunction } from "express";
-import { ResponseError, ResponseSuccess } from "../helper/ResponseTranslator";
+import { ResponseError } from "../helper/ResponseTranslator";
 declare const SearchGatewayRequest: z.ZodObject<{
     params: z.ZodAny;
     headers: z.ZodAny;
@@ -120,5 +120,5 @@ export interface Pagination {
     totalItems: number;
     itemsCount: number;
 }
-export declare function ValidateSearchGateway(req: SearchGatewayRequestType, res: Response<ResponseSuccess<SearchGatewayAPIStandardResponse> | ResponseError>, next: NextFunction): Response<ResponseError | ResponseSuccess<SearchGatewayAPIStandardResponse>, Record<string, any>> | undefined;
+export declare function ValidateSearchGateway(req: SearchGatewayRequestType, res: Response<SearchGatewayAPIStandardResponse | ResponseError>, next: NextFunction): Response<ResponseError | SearchGatewayAPIStandardResponse, Record<string, any>> | undefined;
 export {};
