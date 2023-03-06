@@ -100,5 +100,8 @@ export function ValidateSearchGateway(
             return res
                 .status(HttpStatusCode.BadRequest)
                 .json(new ResponseError({ code: HttpStatusCode.BadRequest, message: error.message }));
+        return res
+            .status(HttpStatusCode.BadRequest)
+            .json(new ResponseError({ code: HttpStatusCode.BadRequest, message: "Unknown error" }));
     }
 }
