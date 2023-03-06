@@ -39,7 +39,7 @@ const PreconfirmGatewayRequest = z.object({
             email: z.string(),
             address: z.string(),
             zipCode: z.string(),
-            phones: z.string(),
+            phones: z.array(z.string()),
             nationality: z.string(),
         }),
         activities: z.array(z.object({

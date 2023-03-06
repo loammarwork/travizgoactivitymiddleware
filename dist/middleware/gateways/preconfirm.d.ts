@@ -13,7 +13,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             email: z.ZodString;
             address: z.ZodString;
             zipCode: z.ZodString;
-            phones: z.ZodString;
+            phones: z.ZodArray<z.ZodString, "many">;
             nationality: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             address: string;
@@ -22,7 +22,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             email: string;
             surname: string;
             zipCode: string;
-            phones: string;
+            phones: string[];
             nationality: string;
         }, {
             address: string;
@@ -31,7 +31,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             email: string;
             surname: string;
             zipCode: string;
-            phones: string;
+            phones: string[];
             nationality: string;
         }>;
         activities: z.ZodArray<z.ZodObject<{
@@ -166,7 +166,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             email: string;
             surname: string;
             zipCode: string;
-            phones: string;
+            phones: string[];
             nationality: string;
         };
         activities: {
@@ -201,7 +201,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             email: string;
             surname: string;
             zipCode: string;
-            phones: string;
+            phones: string[];
             nationality: string;
         };
         activities: {
@@ -239,7 +239,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             email: string;
             surname: string;
             zipCode: string;
-            phones: string;
+            phones: string[];
             nationality: string;
         };
         activities: {
@@ -279,7 +279,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             email: string;
             surname: string;
             zipCode: string;
-            phones: string;
+            phones: string[];
             nationality: string;
         };
         activities: {
