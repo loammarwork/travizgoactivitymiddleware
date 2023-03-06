@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.mapper = void 0;
 exports.mapper = {
+    /*Global*/
     DAY0: "Sunday",
     DAY1: "Monday",
     DAY2: "Tuesday",
@@ -9,6 +10,7 @@ exports.mapper = {
     DAY4: "Thursday",
     DAY5: "Friday",
     DAY6: "Saturday",
+    /*Global*/
     /* Extranet */
     how_to_redeem: "How to redeem",
     description: "Description",

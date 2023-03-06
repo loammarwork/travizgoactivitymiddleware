@@ -19,4 +19,5 @@ __exportStar(require("./gateways/detail"), exports);
 __exportStar(require("./helper/ResponseTranslator"), exports);
 __exportStar(require("./types/ImageSize"), exports);
 __exportStar(require("./types/Language"), exports);
+__exportStar(require("./helper/mapper"), exports);
 //# sourceMappingURL=index.js.map
