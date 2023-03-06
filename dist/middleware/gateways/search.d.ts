@@ -13,59 +13,59 @@ declare const SearchGatewayRequest: z.ZodObject<{
             itemsPerPage: z.ZodNumber;
             page: z.ZodNumber;
         }, "strip", z.ZodTypeAny, {
-            itemsPerPage?: number;
-            page?: number;
+            itemsPerPage: number;
+            page: number;
         }, {
-            itemsPerPage?: number;
-            page?: number;
+            itemsPerPage: number;
+            page: number;
         }>;
     }, "strip", z.ZodTypeAny, {
-        keyword?: string;
-        from?: string;
-        to?: string;
-        language?: string;
-        pagination?: {
-            itemsPerPage?: number;
-            page?: number;
+        language: string;
+        from: string;
+        keyword: string;
+        to: string;
+        pagination: {
+            itemsPerPage: number;
+            page: number;
         };
     }, {
-        keyword?: string;
-        from?: string;
-        to?: string;
-        language?: string;
-        pagination?: {
-            itemsPerPage?: number;
-            page?: number;
+        language: string;
+        from: string;
+        keyword: string;
+        to: string;
+        pagination: {
+            itemsPerPage: number;
+            page: number;
         };
     }>;
     query: z.ZodAny;
 }, "strip", z.ZodTypeAny, {
-    params?: any;
-    headers?: any;
-    body?: {
-        keyword?: string;
-        from?: string;
-        to?: string;
-        language?: string;
-        pagination?: {
-            itemsPerPage?: number;
-            page?: number;
+    body: {
+        language: string;
+        from: string;
+        keyword: string;
+        to: string;
+        pagination: {
+            itemsPerPage: number;
+            page: number;
         };
     };
+    params?: any;
+    headers?: any;
     query?: any;
 }, {
-    params?: any;
-    headers?: any;
-    body?: {
-        keyword?: string;
-        from?: string;
-        to?: string;
-        language?: string;
-        pagination?: {
-            itemsPerPage?: number;
-            page?: number;
+    body: {
+        language: string;
+        from: string;
+        keyword: string;
+        to: string;
+        pagination: {
+            itemsPerPage: number;
+            page: number;
         };
     };
+    params?: any;
+    headers?: any;
     query?: any;
 }>;
 export type SearchGatewayRequestType = z.infer<typeof SearchGatewayRequest>;
@@ -120,5 +120,5 @@ export interface Pagination {
     totalItems: number;
     itemsCount: number;
 }
-export declare function ValidateSearchGateway(req: SearchGatewayRequestType, res: Response<ResponseSuccess<SearchGatewayAPIStandardResponse> | ResponseError>, next: NextFunction): Response<ResponseError | ResponseSuccess<SearchGatewayAPIStandardResponse>, Record<string, any>>;
+export declare function ValidateSearchGateway(req: SearchGatewayRequestType, res: Response<ResponseSuccess<SearchGatewayAPIStandardResponse> | ResponseError>, next: NextFunction): Response<ResponseError | ResponseSuccess<SearchGatewayAPIStandardResponse>, Record<string, any>> | undefined;
 export {};
