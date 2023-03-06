@@ -34,8 +34,6 @@ export interface CancelGatewayAPIStandardResponse {
     identifier: string;
     data: {
         reference: string;
-        currency: string;
-        amount: number;
         status: BookingStatusType;
         gatewayResponse: any;
     };
