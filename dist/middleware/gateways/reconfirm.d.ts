@@ -35,7 +35,7 @@ export interface ReconfirmGatewayAPIStandardResponse {
     data: {
         reference: string;
         currency: string;
-        amount: string;
+        amount: number;
         status: BookingStatusType;
         gatewayResponse: any;
     };
