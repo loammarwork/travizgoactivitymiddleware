@@ -1,6 +1,7 @@
 import * as z from "zod";
 import { Response, NextFunction } from "express";
 import { ResponseError } from "../helper/ResponseTranslator";
+import { ImageSizeType } from "../types/ImageSize";
 declare const DetailGatewayRequest: z.ZodObject<{
     params: z.ZodAny;
     headers: z.ZodAny;
@@ -64,35 +65,35 @@ export interface Data {
     amountFrom: AmountFrom;
     packages: Package[];
 }
-export interface Location {
+interface Location {
     country: Country;
 }
-export interface Country {
+interface Country {
     name: string;
     destination: Destination;
 }
-export interface Destination {
+interface Destination {
     name: string;
 }
-export interface ActivityDetail {
+interface ActivityDetail {
     title: string;
     key: string;
     content: string[];
 }
-export interface Image {
+interface Image {
     imageType: string;
     urls: Url[];
 }
-export interface Url {
-    imageSize: string;
+interface Url {
+    imageSize: ImageSizeType;
     resource: string;
 }
-export interface AmountFrom {
+interface AmountFrom {
     amount: number;
     nettAmount: number;
     boxOfficeAmount: number;
 }
-export interface Package {
+interface Package {
     packageId: string;
     packageName: string;
     packageDetails: PackageDetail[];
@@ -105,31 +106,31 @@ export interface Package {
     redeemEnd: any;
     operationDates: OperationDate[];
 }
-export interface PackageDetail {
+interface PackageDetail {
     title: string;
     key: string;
     content: string[];
 }
-export interface AmountsFrom {
+interface AmountsFrom {
     priceName: string;
     amount: number;
     nettAmount: number;
     boxOfficeAmount: number;
     amountDetails: AmountDetails;
 }
-export interface AmountDetails {
+interface AmountDetails {
     paxType: string;
     ageFrom: number;
     ageTo: number;
 }
-export interface OperationDate {
+interface OperationDate {
     date: string;
     day: string;
     operationDetails: OperationDetail[];
     targetMarket: any[];
     amountFrom: AmountFrom2;
 }
-export interface OperationDetail {
+interface OperationDetail {
     showTime: string;
     allotment: Allotment;
     sellOnTime: any;
@@ -137,11 +138,11 @@ export interface OperationDetail {
     requiredTargets: any[];
     resourceData: ResourceData;
 }
-export interface Allotment {
+interface Allotment {
     remaining: string;
     limit: string;
 }
-export interface PaxAmount {
+interface PaxAmount {
     paxType: string;
     amount: number;
     requiredTarget: any;
@@ -153,20 +154,20 @@ export interface PaxAmount {
     remaining: string;
     amountDetails: AmountDetails2;
 }
-export interface AmountDetails2 {
+interface AmountDetails2 {
     paxType: string;
     ageFrom: number;
     ageTo: number;
 }
-export interface ResourceData {
+interface ResourceData {
     rateKey: string;
     cancellationPolicy: CancellationPolicy;
 }
-export interface CancellationPolicy {
+interface CancellationPolicy {
     cancelBefore: string;
     freeCancellation: boolean;
 }
-export interface AmountFrom2 {
+interface AmountFrom2 {
     paxType: string;
     amount: number;
     nettAmount: number;
@@ -176,7 +177,7 @@ export interface AmountFrom2 {
     remaining: string;
     amountDetails: AmountDetails3;
 }
-export interface AmountDetails3 {
+interface AmountDetails3 {
     paxType: string;
     ageFrom: number;
     ageTo: number;
