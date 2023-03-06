@@ -98,9 +98,9 @@ interface Package {
     packageName: string;
     packageDetails: PackageDetail[];
     amountsFrom: AmountsFrom[];
-    ticketValidity: any;
+    ticketValidity: string | null;
     duration: number;
-    opened: Opened[];
+    opened: Opened[] | null;
     isFavorite: boolean;
     redeemStart: string | null;
     redeemEnd: string | null;
@@ -122,12 +122,7 @@ interface AmountsFrom {
     amount: number;
     nettAmount: number;
     boxOfficeAmount: number;
-    amountDetails: AmountDetails;
-}
-interface AmountDetails {
-    paxType: string;
-    ageFrom: number;
-    ageTo: number;
+    amountDetails: any;
 }
 interface OperationDate {
     date: string;
@@ -160,17 +155,12 @@ interface PaxAmount {
     boxOfficeAmount: number;
     minPurchaseQty: number | null;
     maxPurchaseQty: number | null;
-    remaining: string;
-    amountDetails: AmountDetails2;
+    remaining: string | number;
+    amountDetails: any;
 }
 interface TargetMarket {
     name: string;
     code: string;
-}
-interface AmountDetails2 {
-    paxType: string;
-    ageFrom: number;
-    ageTo: number;
 }
 interface ResourceData {
     rateKey: string;
@@ -188,12 +178,7 @@ interface AmountFrom2 {
     minPurchaseQty: number | null;
     maxPurchaseQty: number | null;
     remaining: string;
-    amountDetails: AmountDetails3;
-}
-interface AmountDetails3 {
-    paxType: string;
-    ageFrom: number;
-    ageTo: number;
+    amountDetails: any;
 }
 export declare function ValidateDetailGateway(req: DetailGatewayRequestType, res: Response<DetailGatewayAPIStandardResponse | ResponseError>, next: NextFunction): Response<ResponseError | DetailGatewayAPIStandardResponse, Record<string, any>> | undefined;
 export {};
