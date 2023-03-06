@@ -1,6 +1,7 @@
 import * as z from "zod";
 import { Response, NextFunction } from "express";
 import { ResponseError } from "../helper/ResponseTranslator";
+import { ImageSizeType } from "../types/ImageSize";
 declare const SearchGatewayRequest: z.ZodObject<{
     params: z.ZodAny;
     headers: z.ZodAny;
@@ -111,7 +112,7 @@ export interface Image {
     urls: Url[];
 }
 export interface Url {
-    imageSize: string;
+    imageSize: ImageSizeType;
     resource: string;
 }
 export interface Pagination {
