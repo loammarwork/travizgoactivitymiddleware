@@ -100,11 +100,17 @@ interface Package {
     amountsFrom: AmountsFrom[];
     ticketValidity: any;
     duration: number;
-    opened: any;
+    opened: Opened[];
     isFavorite: boolean;
-    redeemStart: any;
-    redeemEnd: any;
+    redeemStart: string | null;
+    redeemEnd: string | null;
     operationDates: OperationDate[];
+}
+interface Opened {
+    openingTime: string | null;
+    closeTime: string | null;
+    lastAdmissionTime: string | null;
+    weekDays: string[];
 }
 interface PackageDetail {
     title: string;
@@ -127,16 +133,19 @@ interface OperationDate {
     date: string;
     day: string;
     operationDetails: OperationDetail[];
-    targetMarket: any[];
     amountFrom: AmountFrom2;
 }
 interface OperationDetail {
-    showTime: string;
+    showTime: string | null;
     allotment: Allotment;
     sellOnTime: any;
     paxAmounts: PaxAmount[];
-    requiredTargets: any[];
+    requiredTargets: RequireTarget2[];
     resourceData: ResourceData;
+}
+interface RequireTarget2 {
+    code: string;
+    name: string;
 }
 interface Allotment {
     remaining: string;
@@ -145,14 +154,18 @@ interface Allotment {
 interface PaxAmount {
     paxType: string;
     amount: number;
-    requiredTarget: any;
-    targetMarkets: any[];
+    requiredTarget: RequireTarget2;
+    targetMarkets: TargetMarket[];
     nettAmount: number;
     boxOfficeAmount: number;
-    minPurchaseQty: any;
-    maxPurchaseQty: any;
+    minPurchaseQty: number | null;
+    maxPurchaseQty: number | null;
     remaining: string;
     amountDetails: AmountDetails2;
+}
+interface TargetMarket {
+    name: string;
+    code: string;
 }
 interface AmountDetails2 {
     paxType: string;
@@ -172,8 +185,8 @@ interface AmountFrom2 {
     amount: number;
     nettAmount: number;
     boxOfficeAmount: number;
-    minPurchaseQty: any;
-    maxPurchaseQty: any;
+    minPurchaseQty: number | null;
+    maxPurchaseQty: number | null;
     remaining: string;
     amountDetails: AmountDetails3;
 }
