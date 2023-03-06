@@ -1,4 +1,4 @@
-const ImageSize = {
+export const ImageSize = {
     SMALL: "SMALL",
     MEDIUM: "MEDIUM",
     LARGE: "LARGE",
