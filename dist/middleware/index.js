@@ -17,6 +17,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./gateways/search"), exports);
 __exportStar(require("./gateways/detail"), exports);
 __exportStar(require("./gateways/preconfirm"), exports);
+__exportStar(require("./gateways/reconfirm"), exports);
+__exportStar(require("./gateways/cancel"), exports);
 __exportStar(require("./helper/ResponseTranslator"), exports);
 __exportStar(require("./types/ImageSize"), exports);
 __exportStar(require("./types/Language"), exports);
