@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Language = {
+exports.Language = void 0;
+exports.Language = {
     th: "th",
     en: "en",
 };
