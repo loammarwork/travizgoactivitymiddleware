@@ -10,6 +10,10 @@ exports.mapper = {
     DAY4: "Thursday",
     DAY5: "Friday",
     DAY6: "Saturday",
+    SECOND: 1,
+    MINUTES: 60,
+    HOURS: 3600,
+    DAYS: 86400,
     /*Global*/
     /* Extranet */
     how_to_redeem: "How to redeem",
@@ -34,6 +38,8 @@ exports.mapper = {
     included: "Includes",
     importantInfo: "Important Info",
     advancedTips: "Advanced Tips",
+    redeemInfo: "Redeem Info",
+    directEntrance: "Direct Entrance",
     /* HotelBeds */
 };
 exports.default = exports.mapper;

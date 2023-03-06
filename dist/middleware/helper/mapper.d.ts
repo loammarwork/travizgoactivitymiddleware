@@ -6,6 +6,10 @@ export declare const mapper: {
     readonly DAY4: "Thursday";
     readonly DAY5: "Friday";
     readonly DAY6: "Saturday";
+    readonly SECOND: 1;
+    readonly MINUTES: 60;
+    readonly HOURS: 3600;
+    readonly DAYS: 86400;
     readonly how_to_redeem: "How to redeem";
     readonly description: "Description";
     readonly highlight: "Highlights";
@@ -24,5 +28,7 @@ export declare const mapper: {
     readonly included: "Includes";
     readonly importantInfo: "Important Info";
     readonly advancedTips: "Advanced Tips";
+    readonly redeemInfo: "Redeem Info";
+    readonly directEntrance: "Direct Entrance";
 };
 export default mapper;
