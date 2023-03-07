@@ -93,7 +93,13 @@ interface AmountFrom {
     nettAmount: number;
     boxOfficeAmount: number;
 }
+interface ExtraData {
+    code: string;
+    text: string;
+    required: boolean;
+}
 interface Package {
+    extraDatas: ExtraData[];
     packageId: string;
     packageName: string;
     packageDetails: PackageDetail[];

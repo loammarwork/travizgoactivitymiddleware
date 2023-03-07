@@ -77,7 +77,14 @@ interface AmountFrom {
     boxOfficeAmount: number;
 }
 
+interface ExtraData {
+    code: string;
+    text: string;
+    required: boolean;
+}
+
 interface Package {
+    extraDatas: ExtraData[];
     packageId: string;
     packageName: string;
     packageDetails: PackageDetail[];
@@ -194,8 +201,6 @@ export function ValidateDetailGateway(
             return res
                 .status(HttpStatusCode.BadRequest)
                 .json(new ResponseError({ code: HttpStatusCode.BadRequest, message: error.message }));
-        return res
-            .status(HttpStatusCode.BadRequest)
-            .json(new ResponseError({ code: HttpStatusCode.BadRequest, message: "Unknown error" }));
+        return res.status(HttpStatusCode.BadRequest).json(new ResponseError({ code: HttpStatusCode.BadRequest, message: "Unknown error" }));
     }
 }

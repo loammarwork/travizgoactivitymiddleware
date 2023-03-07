@@ -53,9 +53,7 @@ function ValidateDetailGateway(req, res, next) {
             return res
                 .status(axios_1.HttpStatusCode.BadRequest)
                 .json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: error.message }));
-        return res
-            .status(axios_1.HttpStatusCode.BadRequest)
-            .json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: "Unknown error" }));
+        return res.status(axios_1.HttpStatusCode.BadRequest).json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: "Unknown error" }));
     }
 }
 exports.ValidateDetailGateway = ValidateDetailGateway;
