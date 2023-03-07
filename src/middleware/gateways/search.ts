@@ -12,7 +12,6 @@ const SearchGatewayRequest = z.object({
         keyword: z.string(),
         from: z.string(),
         to: z.string(),
-        language: z.string(),
         pagination: z.object({
             itemsPerPage: z.number(),
             page: z.number(),
@@ -101,8 +100,6 @@ export function ValidateSearchGateway(
             return res
                 .status(HttpStatusCode.BadRequest)
                 .json(new ResponseError({ code: HttpStatusCode.BadRequest, message: error.message }));
-        return res
-            .status(HttpStatusCode.BadRequest)
-            .json(new ResponseError({ code: HttpStatusCode.BadRequest, message: "Unknown error" }));
+        return res.status(HttpStatusCode.BadRequest).json(new ResponseError({ code: HttpStatusCode.BadRequest, message: "Unknown error" }));
     }
 }
