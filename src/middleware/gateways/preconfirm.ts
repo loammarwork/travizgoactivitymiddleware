@@ -26,6 +26,17 @@ const PreconfirmGatewayRequest = z.object({
                     rateKey: z.string(),
                     showTime: z.union([z.string(), z.null()]),
                 }),
+                answers: z
+                    .array(
+                        z.object({
+                            question: z.object({
+                                code: z.string(),
+                                text: z.string(),
+                            }),
+                            answer: z.string(),
+                        })
+                    )
+                    .optional(),
                 paxes: z.array(
                     z.object({
                         name: z.string(),
@@ -86,8 +97,6 @@ export function ValidatePreconfirmGateway(
             return res
                 .status(HttpStatusCode.BadRequest)
                 .json(new ResponseError({ code: HttpStatusCode.BadRequest, message: error.message }));
-        return res
-            .status(HttpStatusCode.BadRequest)
-            .json(new ResponseError({ code: HttpStatusCode.BadRequest, message: "Unknown error" }));
+        return res.status(HttpStatusCode.BadRequest).json(new ResponseError({ code: HttpStatusCode.BadRequest, message: "Unknown error" }));
     }
 }
