@@ -1,12 +1,12 @@
 export declare const TargetSegment: {
-    readonly AttractionAndTicket: "Attraction & Ticket";
+    readonly AttractionAndTicket: "Attractions & Tickets";
     readonly TourAndSightSeeing: "Tours & Sightseeing";
     readonly FoodAndDrink: "Food & Drink";
     readonly RelaxSpaAndBeauty: "Relax Spa & Beauty";
     readonly Transport: "Transport";
     readonly Health: "Health";
-    readonly WifiAndSimCard: "Wifi & sim card";
-    readonly ThemeParksAndWaterParks: "Theme parks & water parks";
+    readonly WifiAndSimCard: "Wifi & Sim card";
+    readonly ThemeParksAndWaterParks: "Theme parks & Water parks";
     readonly MuseumsAndGalleries: "Museums and Galleries";
     readonly ZooAndFarms: "Zoo & Farms";
     readonly MusicalTheatre: "Musical theatre";
@@ -15,7 +15,7 @@ export declare const TargetSegment: {
     readonly MultiDayTour: "Muti-day tours";
     readonly NatureAndWildlifeTours: "Nature & Wildlife Tours";
     readonly HeritageAndCulturalTours: "Heritage and cultural tours";
-    readonly CruisesSailingAndWaterTours: "Cruises, sailing & water tours";
+    readonly CruisesSailingAndWaterTours: "Cruises, sailing & Water tours";
     readonly RestaurantAndDiningVouchers: "Restaurant & Dining Vouchers";
     readonly DinnerCruises: "Dinner Cruises";
     readonly Other: "Other";
