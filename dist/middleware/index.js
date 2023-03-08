@@ -25,4 +25,5 @@ __exportStar(require("./types/Language"), exports);
 __exportStar(require("./types/BookingStatus"), exports);
 __exportStar(require("./types/PaymentStatus"), exports);
 __exportStar(require("./helper/mapper"), exports);
+__exportStar(require("./helper/segmentMapper"), exports);
 //# sourceMappingURL=index.js.map
