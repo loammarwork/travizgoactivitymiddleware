@@ -48,6 +48,15 @@ const PreconfirmGatewayRequest = z.object({
                 rateKey: z.string(),
                 showTime: z.union([z.string(), z.null()]),
             }),
+            answers: z
+                .array(z.object({
+                question: z.object({
+                    code: z.string(),
+                    text: z.string(),
+                }),
+                answer: z.string(),
+            }))
+                .optional(),
             paxes: z.array(z.object({
                 name: z.string(),
                 surname: z.string(),
@@ -83,9 +92,7 @@ function ValidatePreconfirmGateway(req, res, next) {
             return res
                 .status(axios_1.HttpStatusCode.BadRequest)
                 .json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: error.message }));
-        return res
-            .status(axios_1.HttpStatusCode.BadRequest)
-            .json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: "Unknown error" }));
+        return res.status(axios_1.HttpStatusCode.BadRequest).json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: "Unknown error" }));
     }
 }
 exports.ValidatePreconfirmGateway = ValidatePreconfirmGateway;

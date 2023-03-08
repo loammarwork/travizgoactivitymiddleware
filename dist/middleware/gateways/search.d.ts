@@ -9,7 +9,6 @@ declare const SearchGatewayRequest: z.ZodObject<{
         keyword: z.ZodString;
         from: z.ZodString;
         to: z.ZodString;
-        language: z.ZodString;
         pagination: z.ZodObject<{
             itemsPerPage: z.ZodNumber;
             page: z.ZodNumber;
@@ -21,7 +20,6 @@ declare const SearchGatewayRequest: z.ZodObject<{
             page: number;
         }>;
     }, "strip", z.ZodTypeAny, {
-        language: string;
         from: string;
         keyword: string;
         to: string;
@@ -30,7 +28,6 @@ declare const SearchGatewayRequest: z.ZodObject<{
             page: number;
         };
     }, {
-        language: string;
         from: string;
         keyword: string;
         to: string;
@@ -42,7 +39,6 @@ declare const SearchGatewayRequest: z.ZodObject<{
     query: z.ZodAny;
 }, "strip", z.ZodTypeAny, {
     body: {
-        language: string;
         from: string;
         keyword: string;
         to: string;
@@ -56,7 +52,6 @@ declare const SearchGatewayRequest: z.ZodObject<{
     query?: any;
 }, {
     body: {
-        language: string;
         from: string;
         keyword: string;
         to: string;

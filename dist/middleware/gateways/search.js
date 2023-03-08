@@ -35,7 +35,6 @@ const SearchGatewayRequest = z.object({
         keyword: z.string(),
         from: z.string(),
         to: z.string(),
-        language: z.string(),
         pagination: z.object({
             itemsPerPage: z.number(),
             page: z.number(),
@@ -57,9 +56,7 @@ function ValidateSearchGateway(req, res, next) {
             return res
                 .status(axios_1.HttpStatusCode.BadRequest)
                 .json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: error.message }));
-        return res
-            .status(axios_1.HttpStatusCode.BadRequest)
-            .json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: "Unknown error" }));
+        return res.status(axios_1.HttpStatusCode.BadRequest).json(new ResponseTranslator_1.ResponseError({ code: axios_1.HttpStatusCode.BadRequest, message: "Unknown error" }));
     }
 }
 exports.ValidateSearchGateway = ValidateSearchGateway;

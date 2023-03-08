@@ -46,6 +46,31 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
                 rateKey: string;
                 showTime: string | null;
             }>;
+            answers: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                question: z.ZodObject<{
+                    code: z.ZodString;
+                    text: z.ZodString;
+                }, "strip", z.ZodTypeAny, {
+                    code: string;
+                    text: string;
+                }, {
+                    code: string;
+                    text: string;
+                }>;
+                answer: z.ZodString;
+            }, "strip", z.ZodTypeAny, {
+                answer: string;
+                question: {
+                    code: string;
+                    text: string;
+                };
+            }, {
+                answer: string;
+                question: {
+                    code: string;
+                    text: string;
+                };
+            }>, "many">>;
             paxes: z.ZodArray<z.ZodObject<{
                 name: z.ZodString;
                 surname: z.ZodString;
@@ -134,6 +159,13 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
                     amountDetails?: any;
                 };
             }[];
+            answers?: {
+                answer: string;
+                question: {
+                    code: string;
+                    text: string;
+                };
+            }[] | undefined;
         }, {
             serviceDate: string;
             activityDetail: {
@@ -157,6 +189,13 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
                     amountDetails?: any;
                 };
             }[];
+            answers?: {
+                answer: string;
+                question: {
+                    code: string;
+                    text: string;
+                };
+            }[] | undefined;
         }>, "many">;
     }, "strip", z.ZodTypeAny, {
         bookingHolder: {
@@ -192,6 +231,13 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
                     amountDetails?: any;
                 };
             }[];
+            answers?: {
+                answer: string;
+                question: {
+                    code: string;
+                    text: string;
+                };
+            }[] | undefined;
         }[];
     }, {
         bookingHolder: {
@@ -227,6 +273,13 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
                     amountDetails?: any;
                 };
             }[];
+            answers?: {
+                answer: string;
+                question: {
+                    code: string;
+                    text: string;
+                };
+            }[] | undefined;
         }[];
     }>;
     query: z.ZodAny;
@@ -265,6 +318,13 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
                     amountDetails?: any;
                 };
             }[];
+            answers?: {
+                answer: string;
+                question: {
+                    code: string;
+                    text: string;
+                };
+            }[] | undefined;
         }[];
     };
     params?: any;
@@ -305,6 +365,13 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
                     amountDetails?: any;
                 };
             }[];
+            answers?: {
+                answer: string;
+                question: {
+                    code: string;
+                    text: string;
+                };
+            }[] | undefined;
         }[];
     };
     params?: any;
