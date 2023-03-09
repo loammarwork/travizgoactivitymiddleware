@@ -24,6 +24,8 @@ exports.TargetSegment = {
     Other: "Other",
 };
 exports.SegmentMapper = {
+    //GlobalTix
+    ["Attraction"]: ["Attractions & Tickets"],
     //HotelBed
     ["City tours"]: [
         "Tour",
