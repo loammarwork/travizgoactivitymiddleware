@@ -35,6 +35,7 @@ const SearchGatewayRequest = z.object({
         keyword: z.string(),
         from: z.string(),
         to: z.string(),
+        language: z.string(),
         pagination: z.object({
             itemsPerPage: z.number(),
             page: z.number(),
