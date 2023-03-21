@@ -18,8 +18,21 @@ export declare const TargetSegment: {
     readonly CruisesSailingAndWaterTours: "Cruises, sailing & Water tours";
     readonly RestaurantAndDiningVouchers: "Restaurant & Dining Vouchers";
     readonly DinnerCruises: "Dinner Cruises";
+    readonly _0_3_Hours: "0 - 3 Hours";
+    readonly _3_5_Hours: "3 - 5 Hours";
+    readonly _5_7_Hours: "5 - 7 Hours";
+    readonly _1_3_Days: "1 - 3 Days";
+    readonly _More_3_Days: "3+ Days";
     readonly Other: "Other";
 };
+/**
+ *  ["0 - 3 hours"]: ["Other"],
+    ["3 - 5 hours"]: ["Other"],
+    ["5 - 7 hours"]: ["Other"],
+    ["1 to 3 days"]: ["Other"],
+    ["3+ days"]: ["Other"],
+ *
+ */
 export type TargetSegmentType = typeof TargetSegment[keyof typeof TargetSegment];
 export type SegmentMapperTypeRecord<T> = Record<string, T>;
 export declare const SegmentMapper: SegmentMapperTypeRecord<Array<TargetSegmentType>>;
