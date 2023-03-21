@@ -24,7 +24,13 @@ export declare const TargetSegment: {
     readonly D1_3_Days: "1 - 3 Days";
     readonly More_3_Days: "3+ Days";
     readonly Other: "Other";
+    readonly SportActivities: "Sport Activities";
+    readonly WorkShopActivities: "Workshop Activities";
 };
+export type ERPMapperType = keyof typeof TargetSegment;
+export type ERPMapperValue = typeof TargetSegment[keyof typeof TargetSegment];
+export type ERPMapperTypeRecord = Record<ERPMapperValue, ERPMapperType>;
+export declare const ERPCategoryMapperCode: ERPMapperTypeRecord;
 /**
  *  ["0 - 3 hours"]: ["Other"],
     ["3 - 5 hours"]: ["Other"],

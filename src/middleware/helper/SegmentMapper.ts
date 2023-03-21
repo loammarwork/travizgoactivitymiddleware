@@ -24,7 +24,43 @@ export const TargetSegment = {
     D1_3_Days: "1 - 3 Days",
     More_3_Days: "3+ Days",
     Other: "Other",
+    SportActivities: "Sport Activities",
+    WorkShopActivities: "Workshop Activities",
 } as const;
+
+export type ERPMapperType = keyof typeof TargetSegment;
+export type ERPMapperValue = typeof TargetSegment[keyof typeof TargetSegment];
+export type ERPMapperTypeRecord = Record<ERPMapperValue, ERPMapperType>;
+
+export const ERPCategoryMapperCode: ERPMapperTypeRecord = {
+    "Attractions & Tickets": "AttractionAndTicket",
+    "Tours & Sightseeing": "TourAndSightSeeing",
+    "Food & Drink": "FoodAndDrink",
+    "Relax Spa & Beauty": "RelaxSpaAndBeauty",
+    Transport: "Transport",
+    Health: "Health",
+    "Wifi & Sim card": "WifiAndSimCard",
+    "Sport Activities": "SportActivities",
+    "Workshop Activities": "WorkShopActivities",
+    Other: "Other",
+    "Theme parks & Water parks": "Other",
+    "Museums & Galleries": "Other",
+    "Zoo & Farms": "Other",
+    "Musical theatre": "Other",
+    Tour: "Transport",
+    "Full-day tours": "Other",
+    "Muti-day tours": "Other",
+    "Nature & Wildlife Tours": "Other",
+    "Heritage & Cultural tours": "Other",
+    "Cruises, sailing & Water tours": "Other",
+    "Restaurant & Dining Vouchers": "Other",
+    "Dinner Cruises": "Other",
+    "0 - 3 Hours": "Other",
+    "3 - 5 Hours": "Other",
+    "5 - 7 Hours": "Other",
+    "1 - 3 Days": "Other",
+    "3+ Days": "Other",
+};
 
 /**
  *  ["0 - 3 hours"]: ["Other"],

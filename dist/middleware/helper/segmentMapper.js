@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SegmentMapper = exports.TargetSegment = void 0;
+exports.SegmentMapper = exports.ERPCategoryMapperCode = exports.TargetSegment = void 0;
 exports.TargetSegment = {
     AttractionAndTicket: "Attractions & Tickets",
     TourAndSightSeeing: "Tours & Sightseeing",
@@ -27,6 +27,37 @@ exports.TargetSegment = {
     D1_3_Days: "1 - 3 Days",
     More_3_Days: "3+ Days",
     Other: "Other",
+    SportActivities: "Sport Activities",
+    WorkShopActivities: "Workshop Activities",
+};
+exports.ERPCategoryMapperCode = {
+    "Attractions & Tickets": "AttractionAndTicket",
+    "Tours & Sightseeing": "TourAndSightSeeing",
+    "Food & Drink": "FoodAndDrink",
+    "Relax Spa & Beauty": "RelaxSpaAndBeauty",
+    Transport: "Transport",
+    Health: "Health",
+    "Wifi & Sim card": "WifiAndSimCard",
+    "Sport Activities": "SportActivities",
+    "Workshop Activities": "WorkShopActivities",
+    Other: "Other",
+    "Theme parks & Water parks": "Other",
+    "Museums & Galleries": "Other",
+    "Zoo & Farms": "Other",
+    "Musical theatre": "Other",
+    Tour: "Transport",
+    "Full-day tours": "Other",
+    "Muti-day tours": "Other",
+    "Nature & Wildlife Tours": "Other",
+    "Heritage & Cultural tours": "Other",
+    "Cruises, sailing & Water tours": "Other",
+    "Restaurant & Dining Vouchers": "Other",
+    "Dinner Cruises": "Other",
+    "0 - 3 Hours": "Other",
+    "3 - 5 Hours": "Other",
+    "5 - 7 Hours": "Other",
+    "1 - 3 Days": "Other",
+    "3+ Days": "Other",
 };
 exports.SegmentMapper = {
     //GlobalTix
