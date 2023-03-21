@@ -22,7 +22,7 @@ export declare const TargetSegment: {
     readonly D3_5_Hours: "3 - 5 Hours";
     readonly D5_7_Hours: "5 - 7 Hours";
     readonly D1_3_Days: "1 - 3 Days";
-    readonly _More_3_Days: "3+ Days";
+    readonly More_3_Days: "3+ Days";
     readonly Other: "Other";
 };
 /**

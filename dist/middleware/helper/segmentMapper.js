@@ -25,7 +25,7 @@ exports.TargetSegment = {
     D3_5_Hours: "3 - 5 Hours",
     D5_7_Hours: "5 - 7 Hours",
     D1_3_Days: "1 - 3 Days",
-    _More_3_Days: "3+ Days",
+    More_3_Days: "3+ Days",
     Other: "Other",
 };
 exports.SegmentMapper = {
