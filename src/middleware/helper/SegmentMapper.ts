@@ -18,8 +18,22 @@ export const TargetSegment = {
     CruisesSailingAndWaterTours: "Cruises, sailing & Water tours",
     RestaurantAndDiningVouchers: "Restaurant & Dining Vouchers",
     DinnerCruises: "Dinner Cruises",
+    _0_3_Hours: "0 - 3 Hours",
+    _3_5_Hours: "3 - 5 Hours",
+    _5_7_Hours: "5 - 7 Hours",
+    _1_3_Days: "1 - 3 Days",
+    _More_3_Days: "3+ Days",
     Other: "Other",
 } as const;
+
+/**
+ *  ["0 - 3 hours"]: ["Other"],
+    ["3 - 5 hours"]: ["Other"],
+    ["5 - 7 hours"]: ["Other"],
+    ["1 to 3 days"]: ["Other"],
+    ["3+ days"]: ["Other"],
+ * 
+ */
 
 export type TargetSegmentType = typeof TargetSegment[keyof typeof TargetSegment];
 
@@ -124,11 +138,11 @@ export const SegmentMapper: SegmentMapperTypeRecord<Array<TargetSegmentType>> = 
     ["Spa and Wellness"]: ["Health", "Relax Spa & Beauty"],
     ["Educational tours"]: ["Tour"],
     ["Rail tours"]: ["Other"],
-    ["2-3 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours"],
-    ["4-7 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours"],
-    ["8-14 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours"],
-    ["15-21 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours"],
-    ["More than 21 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours"],
+    ["2-3 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours", "1 - 3 Days"],
+    ["4-7 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours", "3+ Days"],
+    ["8-14 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours", "3+ Days"],
+    ["15-21 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours", "3+ Days"],
+    ["More than 21 days"]: ["Tour", "Tours & Sightseeing", "Muti-day tours", "3+ Days"],
     ["Volunteers"]: ["Other"],
     ["Big Bus"]: ["Other"],
     ["City Sightseeing Worldwide"]: ["Tour", "Tours & Sightseeing"],
@@ -183,11 +197,11 @@ export const SegmentMapper: SegmentMapperTypeRecord<Array<TargetSegmentType>> = 
     ["City tour guide"]: ["Other"],
     ["Historical tour guide"]: ["Other"],
     ["Adventure guide"]: ["Other"],
-    ["0 - 3 hours"]: ["Other"],
-    ["3 - 5 hours"]: ["Other"],
-    ["5 - 7 hours"]: ["Other"],
-    ["1 to 3 days"]: ["Other"],
-    ["3+ days"]: ["Other"],
+    ["0 - 3 hours"]: ["0 - 3 Hours"],
+    ["3 - 5 hours"]: ["3 - 5 Hours"],
+    ["5 - 7 hours"]: ["5 - 7 Hours"],
+    ["1 to 3 days"]: ["1 - 3 Days"],
+    ["3+ days"]: ["3+ Days"],
     ["Morning ( 6.00 - 12.00)"]: ["Other"],
     ["Afternoon (12.00 - 17.00)"]: ["Other"],
     ["Evening (17.00 - 24.00)"]: ["Other"],
