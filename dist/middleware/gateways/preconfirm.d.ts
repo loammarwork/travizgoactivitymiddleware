@@ -6,6 +6,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
     params: z.ZodAny;
     headers: z.ZodAny;
     body: z.ZodObject<{
+        bookingRef: z.ZodString;
         bookingHolder: z.ZodObject<{
             name: z.ZodString;
             surname: z.ZodString;
@@ -198,6 +199,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             }[] | undefined;
         }>, "many">;
     }, "strip", z.ZodTypeAny, {
+        bookingRef: string;
         bookingHolder: {
             address: string;
             name: string;
@@ -240,6 +242,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
             }[] | undefined;
         }[];
     }, {
+        bookingRef: string;
         bookingHolder: {
             address: string;
             name: string;
@@ -285,6 +288,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
     query: z.ZodAny;
 }, "strip", z.ZodTypeAny, {
     body: {
+        bookingRef: string;
         bookingHolder: {
             address: string;
             name: string;
@@ -332,6 +336,7 @@ declare const PreconfirmGatewayRequest: z.ZodObject<{
     query?: any;
 }, {
     body: {
+        bookingRef: string;
         bookingHolder: {
             address: string;
             name: string;

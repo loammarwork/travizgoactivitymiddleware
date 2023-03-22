@@ -9,6 +9,7 @@ const PreconfirmGatewayRequest = z.object({
     params: z.any({}),
     headers: z.any({}),
     body: z.object({
+        bookingRef: z.string(),
         bookingHolder: z.object({
             name: z.string(),
             surname: z.string(),
