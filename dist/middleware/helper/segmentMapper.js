@@ -62,6 +62,7 @@ exports.ERPCategoryMapperCode = {
 exports.SegmentMapper = {
     //GlobalTix
     ["Attraction"]: ["Attractions & Tickets"],
+    ["Tours"]: ["Tour"],
     //HotelBed
     ["City tours"]: [
         "Tour",
