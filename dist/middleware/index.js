@@ -27,4 +27,5 @@ __exportStar(require("./types/PaymentStatus"), exports);
 __exportStar(require("./helper/mapper"), exports);
 __exportStar(require("./helper/segmentMapper"), exports);
 __exportStar(require("./helper/ActivityFilter"), exports);
+__exportStar(require("./helper/GetPlace"), exports);
 //# sourceMappingURL=index.js.map

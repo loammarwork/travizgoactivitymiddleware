@@ -11,3 +11,4 @@ export * from "./types/PaymentStatus";
 export * from "./helper/mapper";
 export * from "./helper/segmentMapper";
 export * from "./helper/ActivityFilter";
+export * from "./helper/GetPlace";
