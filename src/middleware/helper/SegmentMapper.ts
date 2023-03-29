@@ -200,6 +200,7 @@ export const SegmentMapper: SegmentMapperTypeRecord<Array<TargetSegmentType>> = 
     ["Safe2Stay"]: ["Health"],
 
     //Extranet
+    ["Show Performance"]: ["Attractions & Tickets"],
     ["Historical"]: ["Attractions & Tickets"],
     ["Museum/Gallery"]: ["Attractions & Tickets"],
     ["Park Nature & Animals"]: ["Attractions & Tickets"],

@@ -183,6 +183,7 @@ exports.SegmentMapper = {
     ["Wheelchair accessible"]: ["Transport", "Health"],
     ["Safe2Stay"]: ["Health"],
     //Extranet
+    ["Show Performance"]: ["Attractions & Tickets"],
     ["Historical"]: ["Attractions & Tickets"],
     ["Museum/Gallery"]: ["Attractions & Tickets"],
     ["Park Nature & Animals"]: ["Attractions & Tickets"],
