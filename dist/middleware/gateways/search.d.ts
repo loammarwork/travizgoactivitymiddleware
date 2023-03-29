@@ -86,7 +86,10 @@ export interface Daum {
     targetMarket: any[];
     amountFrom: AmountFrom;
     images: Image[];
-    freeCancellation: boolean;
+    freeCancellation: {
+        type: "CANCEL.CONDITIONAL" | "NON.REFUNDABLE" | "FREE.CANCELLATION";
+        note: string;
+    };
 }
 export interface Location {
     country: Country;
