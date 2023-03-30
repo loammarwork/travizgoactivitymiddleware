@@ -56,7 +56,10 @@ export interface Data {
     location: Location;
     currency: string;
     termsAndConditions: any[];
-    freeCancellation: boolean;
+    freeCancellation: {
+        type: "CANCEL.CONDITIONAL" | "NON.REFUNDABLE" | "FREE.CANCELLATION";
+        note: string;
+    };
     activityDetails: ActivityDetail[];
     geoLocation: any;
     images: Image[];
@@ -174,7 +177,10 @@ interface ResourceData {
 }
 interface CancellationPolicy {
     cancelBefore: string;
-    freeCancellation: boolean;
+    freeCancellation: {
+        type: "CANCEL.CONDITIONAL" | "NON.REFUNDABLE" | "FREE.CANCELLATION";
+        note: string;
+    };
 }
 interface AmountFrom2 {
     paxType: string;
