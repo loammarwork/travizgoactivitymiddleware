@@ -74,7 +74,10 @@ export interface PreconfirmGatewayAPIStandardResponse {
         amount: number;
         status: BookingStatusType;
         cancellationDetail: {
-            freeCancellation: boolean;
+            freeCancellation: {
+                type: "CANCEL.CONDITIONAL" | "NON.REFUNDABLE" | "FREE.CANCELLATION";
+                note: string;
+            };
             cancelBefore: string | null;
         };
         gatewayResponse: any;

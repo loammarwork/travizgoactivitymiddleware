@@ -1,4 +1,4 @@
-const SearchMapper = {
+const SearchGlobalMapping = {
     // Global Tix
     keyword: "keyword",
     category: "category",
@@ -9,24 +9,5 @@ const SearchMapper = {
     priceTo: "priceTo",
 };
 
-type SearchMapperType = keyof typeof SearchMapper;
+type SearchMapperType = keyof typeof SearchGlobalMapping;
 export type SearchMapperTypeRecord = Record<SearchMapperType, string>;
-const SearchMapperGlobalTix: SearchMapperTypeRecord = {
-    category: "category",
-    keyword: "keyword",
-    place: "place",
-    price: "price",
-    duration: "duration",
-    priceFrom: "priceFrom",
-    priceTo: "priceTo",
-};
-
-const SearchMapperHotelBeds: SearchMapperTypeRecord = {
-    category: "category",
-    keyword: "keyword",
-    place: "place",
-    price: "price",
-    duration: "",
-    priceFrom: "",
-    priceTo: "",
-};
